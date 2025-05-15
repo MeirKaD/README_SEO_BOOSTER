@@ -1,54 +1,89 @@
-# ReadmeSeoBooster Crew
+# README SEO Booster
 
-Welcome to the ReadmeSeoBooster Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+## 🚀 AI-Powered GitHub README SEO Optimization
 
-## Installation
+README SEO Booster is an intelligent agent-based system built with CrewAI that automatically enhances the search engine optimization (SEO) of GitHub repository README files, improving discoverability while maintaining your project's unique voice.
 
-Ensure you have Python >=3.10 <3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+## 🤖 How It Works
 
-First, if you haven't already, install uv:
+This tool leverages a crew of specialized AI agents to optimize your GitHub README:
 
-```bash
-pip install uv
-```
+1. **Keyword Miner Agent**: Discovers trending and relevant SEO keywords for your repository using Bright Data's MCP
+2. **SEO Refiner Agent**: Intelligently incorporates these keywords into your README file.
+3. **PR Bot Agent**: Creates a pull request with the enhanced README for your review.
 
-Next, navigate to your project directory and install the dependencies:
 
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
-### Customizing
+## 🌟 Key Features
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+- **Non-intrusive optimization**: Preserving your project's style
+- **Data-driven keyword selection**: Uses real search results to identify trending keywords using Bright Data's MCP
+- **Streamlined workflow**: Handles the entire process from keyword discovery to PR creation
+- **User-friendly interface**: Available both as a command-line tool and a Streamlit web application
 
-- Modify `src/readme_seo_booster/config/agents.yaml` to define your agents
-- Modify `src/readme_seo_booster/config/tasks.yaml` to define your tasks
-- Modify `src/readme_seo_booster/crew.py` to add your own logic, tools and specific args
-- Modify `src/readme_seo_booster/main.py` to add custom inputs for your agents and tasks
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+## 🔧 Installation & Setup
 
 ```bash
-$ crewai run
+# Clone the repository
+git clone https://github.com/YourUsername/README_SEO_BOOSTER.git
+cd README_SEO_BOOSTER
+
+# Install dependencies through UV
 ```
 
-This command initializes the readme-seo-booster Crew, assembling the agents and assigning them tasks as defined in your configuration.
+### Environment Variables
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+Create a `.env` file with the following variables:
+```
+GEMINI_API_KEY=your_gemini_api_key
+BRIGHTDATA_API_TOKEN=your_brightdata_token
+GITHUB_PAT=your_github_personal_access_token
+```
 
-## Understanding Your Crew
+## 📊 Usage
 
-The readme-seo-booster Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+### Command Line Interface
+```bash
+# Navigate to the project root
+cd path/to/README_SEO_BOOSTER
 
-## Support
+# Run the CLI
+crewai run 
+```
 
-For support, questions, or feedback regarding the ReadmeSeoBooster Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
+### Web Interface (Streamlit)
+```bash
+# Navigate to the UI file location
+cd path/to/README_SEO_BOOSTER/src/readme_seo_booster
 
-Let's create wonders together with the power and simplicity of crewAI.
+# Run the Streamlit app
+streamlit run ui.py
+```
+
+## 🧠 Technical Details
+
+This project is built with:
+- [CrewAI](https://github.com/joaomdmoura/crewAI) - Framework for orchestrating role-playing AI agents
+- [BrightData MCP](https://github.com/luminati-io/brightdata-mcp) - For web data extraction
+- [GitHub MCP](https://github.com/github/github-mcp-server) - For GitHub automation
+- [Streamlit](https://streamlit.io/) - For the web interface
+
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+MIT License
+
+## 🙏 Acknowledgements
+
+- [CrewAI](https://github.com/joaomdmoura/crewAI) for the amazing agent framework
+- [Bright Data](https://brightdata.com/) for providing the web data tools
+- [GitHub](https://github.com/) for the GitHub automation capabilities
