@@ -1,0 +1,25 @@
+[project]
+name = "readme_seo_booster"
+version = "0.1.0"
+description = "readme-seo-booster using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai-tools[mcp]>=0.44.0",
+    "crewai[tools]>=0.119.0,<1.0.0",
+    "mcp>=1.8.1",
+]
+
+[project.scripts]
+readme_seo_booster = "readme_seo_booster.main:run"
+run_crew = "readme_seo_booster.main:run"
+train = "readme_seo_booster.main:train"
+replay = "readme_seo_booster.main:replay"
+test = "readme_seo_booster.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
